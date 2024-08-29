@@ -1,21 +1,17 @@
 import React from 'react';
-import {SafeAreaView, useColorScheme} from 'react-native';
-
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {SafeAreaView, StyleSheet} from 'react-native';
 import Tesla from './src/screens/Tesla';
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView style={styles.mainContainer}>
       <Tesla />
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  mainContainer: {flex: 1, backgroundColor: 'white'},
+});
 
 export default App;
