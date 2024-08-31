@@ -32,8 +32,6 @@ export const useAxiosFetch = () => {
 
         await insertArticles(db, data.data);
 
-    
-
         setItem(
           `${data.data.articles.length}`,
           ASYNC_STORAGE_KEYS.TOTAL_RECORDS_AVAILABLE,
@@ -41,8 +39,7 @@ export const useAxiosFetch = () => {
 
         setItem(toDate, ASYNC_STORAGE_KEYS.TO_DATE);
       }
-    } catch (error) {
-    }
+    } catch (error) {}
   };
 
   return fetchArticlesFromApi;
