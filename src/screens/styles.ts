@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
   },
   nameIconContainer: {flexDirection: 'row', alignItems: 'center'},
   nameText: {color: 'gray', marginLeft: 5, fontSize: 15},
-  timeText: {fontSize: 15},
+  timeText: {fontSize: 15, color: 'black'},
   titleImageContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -23,6 +23,7 @@ export const styles = StyleSheet.create({
     width: '70%',
     fontWeight: 'bold',
     lineHeight: 30,
+    color: 'black',
   },
   thumbnailImage: {width: 100, height: 100, borderRadius: 20},
   authorText: {color: 'gray', fontSize: 15, marginTop: 15},

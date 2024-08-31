@@ -75,3 +75,8 @@ yarn-error.log
 
 # Custom
 .env
+
+# Expo
+.expo
+dist/
+web-build/

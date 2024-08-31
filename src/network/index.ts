@@ -1,6 +1,6 @@
 import axios from 'axios';
-import {NETWORK_URLS} from '../constants/networkUrls';
+import {BASE_URL} from '../constants/networkUrls';
 
 export const axiosInstance = axios.create({
-  baseURL: NETWORK_URLS.BASE_URL,
+  baseURL: BASE_URL,
 });

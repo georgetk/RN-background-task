@@ -2,6 +2,8 @@
 
 #import <React/RCTBundleURLProvider.h>
 
+#import <TSBackgroundFetch/TSBackgroundFetch.h>
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -11,6 +13,8 @@
   // They will be passed down to the ViewController used by React Native.
   self.initialProps = @{};
 
+  [[TSBackgroundFetch sharedInstance] didFinishLaunching];
+  
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
@@ -22,7 +26,7 @@
 - (NSURL *)bundleURL
 {
 #if DEBUG
-  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"];
+  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@".expo/.virtual-metro-entry"];
 #else
   return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 #endif
